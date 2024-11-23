@@ -162,4 +162,4 @@ cython_debug/
 #.idea/
 
 # Project specifics
-data/*
+backend/data/*
