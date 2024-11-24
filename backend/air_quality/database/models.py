@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, MetaData, String, Float, Date, TIMESTAMP, Table
 
-metadata = MetaData()
+metadata = MetaData(schema='indicators')
 
 atmo_table = Table('atmo', metadata,
     Column("code_no2", Integer, nullable=True),
@@ -22,6 +22,5 @@ atmo_table = Table('atmo', metadata,
     Column("x_wgs84", Float, nullable=True),
     Column("y_reg", Float, nullable=True),
     Column("y_wgs84", Float, nullable=True),
-    schema='index',
     bigquery_clustering_fields=["code_zone", "date_ech"]
 )
